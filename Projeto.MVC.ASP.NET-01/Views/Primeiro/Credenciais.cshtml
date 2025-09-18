@@ -1,0 +1,16 @@
+﻿@*
+   por fazer uso de um Model é de fundamental importancia indicar aqui, na view,  a origem das propriedades que terão seus valores, na view, vinculados. Desta forma, matem-se a consistencia do fluxo de dados da aplicação 
+*@
+
+@model Perfil
+
+@{
+    ViewData["Title"] = "Credenciais";
+}
+
+@* definir a estrutura html necessaria*@
+
+<h2>@ViewData["Title"]</h2>
+<p>Nome: @Model.Nome</p>
+<p>Idade: @Model.Idade</p>
+<p>Endereço: @Model.Endereco</p>

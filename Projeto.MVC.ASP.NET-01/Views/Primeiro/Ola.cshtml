@@ -1,0 +1,14 @@
+﻿@*
+    esta estrutura de caracteres @* determina que este é um espaço de comentários dentro de uma view. Esta possibilidade se dá em função do uso do mecanismo razor
+*@
+
+@{
+    @* Neste contexto, abaixo, será da um nome para esta view*@
+    ViewData["Title"] = "View OLA!";
+}
+
+@* implementar a estrutura html necessária para vincular - binding - dos dados do controller para a view*@
+<h1>@ViewData["Title"]</h1>
+<br />
+<br />
+<h2>@ViewBag.Message</h2>
