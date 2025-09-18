@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Projeto04.AspNet.WebAPI.BackEnd.props" />
+</Project>
