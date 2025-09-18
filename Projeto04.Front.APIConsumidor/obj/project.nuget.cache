@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "Ui93/0zj7tcufV522KEE/7Wun7IhUjMAwU3JHMTXYJ2vNPHYoFMYZRbZWwubD7IimwRsuErRSMM80XTr9NEWIA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\b.baria.morimitsu\\Downloads\\4 - Asp.Net-20240530T185355Z-001\\4 - Asp.Net\\Projeto04.Front.APIConsumidor\\Projeto04.Front.APIConsumidor\\Projeto04.Front.APIConsumidor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\b.baria.morimitsu\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.18\\microsoft.windowsdesktop.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\b.baria.morimitsu\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.18\\microsoft.netcore.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\b.baria.morimitsu\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.18\\microsoft.aspnetcore.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\b.baria.morimitsu\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.18\\microsoft.netcore.app.host.win-x64.7.0.18.nupkg.sha512"
+  ],
+  "logs": []
+}

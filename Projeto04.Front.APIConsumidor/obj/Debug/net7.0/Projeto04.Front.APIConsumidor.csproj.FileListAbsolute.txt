@@ -1,0 +1,60 @@
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\bin\Debug\net7.0\appsettings.json
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\bin\Debug\net7.0\Projeto04.Front.APIConsumidor.staticwebassets.runtime.json
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\bin\Debug\net7.0\Projeto04.Front.APIConsumidor.exe
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\bin\Debug\net7.0\Projeto04.Front.APIConsumidor.deps.json
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\bin\Debug\net7.0\Projeto04.Front.APIConsumidor.runtimeconfig.json
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\bin\Debug\net7.0\Projeto04.Front.APIConsumidor.dll
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\bin\Debug\net7.0\Projeto04.Front.APIConsumidor.pdb
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\Projeto04.Front.APIConsumidor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\Projeto04.Front.APIConsumidor.AssemblyInfoInputs.cache
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\Projeto04.Front.APIConsumidor.AssemblyInfo.cs
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\Projeto04.Front.APIConsumidor.csproj.CoreCompileInputs.cache
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\Projeto04.Front.APIConsumidor.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\Projeto04.Front.APIConsumidor.RazorAssemblyInfo.cache
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\Projeto04.Front.APIConsumidor.RazorAssemblyInfo.cs
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\staticwebassets\msbuild.Projeto04.Front.APIConsumidor.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\staticwebassets\msbuild.build.Projeto04.Front.APIConsumidor.props
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Projeto04.Front.APIConsumidor.props
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Projeto04.Front.APIConsumidor.props
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\scopedcss\bundle\Projeto04.Front.APIConsumidor.styles.css
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\scopedcss\projectbundle\Projeto04.Front.APIConsumidor.bundle.scp.css
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\Projeto04.Front.APIConsumidor.dll
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\refint\Projeto04.Front.APIConsumidor.dll
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\Projeto04.Front.APIConsumidor.pdb
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\Projeto04.Front.APIConsumidor.genruntimeconfig.cache
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\ref\Projeto04.Front.APIConsumidor.dll
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\bin\Debug\net7.0\appsettings.json
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\bin\Debug\net7.0\Projeto04.Front.APIConsumidor.staticwebassets.runtime.json
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\bin\Debug\net7.0\Projeto04.Front.APIConsumidor.exe
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\bin\Debug\net7.0\Projeto04.Front.APIConsumidor.deps.json
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\bin\Debug\net7.0\Projeto04.Front.APIConsumidor.runtimeconfig.json
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\bin\Debug\net7.0\Projeto04.Front.APIConsumidor.dll
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\bin\Debug\net7.0\Projeto04.Front.APIConsumidor.pdb
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\Projeto04.Front.APIConsumidor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\Projeto04.Front.APIConsumidor.AssemblyInfoInputs.cache
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\Projeto04.Front.APIConsumidor.AssemblyInfo.cs
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\Projeto04.Front.APIConsumidor.csproj.CoreCompileInputs.cache
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\Projeto04.Front.APIConsumidor.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\Projeto04.Front.APIConsumidor.RazorAssemblyInfo.cache
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\Projeto04.Front.APIConsumidor.RazorAssemblyInfo.cs
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\staticwebassets\msbuild.Projeto04.Front.APIConsumidor.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\staticwebassets\msbuild.build.Projeto04.Front.APIConsumidor.props
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Projeto04.Front.APIConsumidor.props
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Projeto04.Front.APIConsumidor.props
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\scopedcss\bundle\Projeto04.Front.APIConsumidor.styles.css
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\scopedcss\projectbundle\Projeto04.Front.APIConsumidor.bundle.scp.css
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\Projeto04.Front.APIConsumidor.dll
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\refint\Projeto04.Front.APIConsumidor.dll
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\Projeto04.Front.APIConsumidor.pdb
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\Projeto04.Front.APIConsumidor.genruntimeconfig.cache
+C:\Users\b.baria.morimitsu\Downloads\4 - Asp.Net-20240530T185355Z-001\4 - Asp.Net\Projeto04.Front.APIConsumidor\Projeto04.Front.APIConsumidor\obj\Debug\net7.0\ref\Projeto04.Front.APIConsumidor.dll
