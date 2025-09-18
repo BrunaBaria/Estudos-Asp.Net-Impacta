@@ -1,0 +1,56 @@
+﻿@*
+    estabelecer a comunicação entre a view e o model
+*@
+
+@model Colab
+
+@{
+    ViewData["Title"] = "Atualizar registro";
+}
+
+@* definir a estrutura html necessaria*@
+
+<a class="nav-link" asp-action="Index">Listar Registros</a>
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post">
+    <p>
+        <label asp-for="Nome">Nome</label>
+        <input asp-for="Nome" type="text" />
+        <span></span>
+    </p>
+
+    <p>
+        <label asp-for="Idade">Idade</label>
+        <input asp-for="Idade" type="number" />
+        <span></span>
+    </p>
+
+    <p>
+        <label asp-for="Salario">Salario</label>
+        <input asp-for="Salario" type="text" />
+        <span></span>
+    </p>
+
+    <p>
+        <label asp-for="Departamento">Departamento</label>
+        <select asp-for="Departamento">
+            <option value="Dev">Dev</option>
+            <option value="RH">RH</option>
+            <option value="Financeiro">Financeiro</option>
+        </select>
+    </p>
+
+    <p>
+        <label asp-for="Genero">Genero</label>
+        <input type="radio" asp-for="Genero" value="F" /> Feminino
+        <input type="radio" asp-for="Genero" value="M" /> Masculino
+        <input type="radio" asp-for="Genero" value="O" /> Outros
+        <span></span>
+    </p>
+
+    <p>
+        <button type="submit">Atualizar</button>
+    </p>
+</form>
