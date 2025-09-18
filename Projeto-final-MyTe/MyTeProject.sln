@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyTeProject.FrontEnd", "MyTeProject.FrontEnd\MyTeProject.FrontEnd.csproj", "{F8D2888F-C9AD-43C5-911D-2E7523A792A6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyTeProject.BackEnd", "ProjetoMyTe.BackEnd\MyTeProject.BackEnd.csproj", "{688B4369-469D-487A-B5E0-F23869F65D86}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F8D2888F-C9AD-43C5-911D-2E7523A792A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8D2888F-C9AD-43C5-911D-2E7523A792A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8D2888F-C9AD-43C5-911D-2E7523A792A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8D2888F-C9AD-43C5-911D-2E7523A792A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{688B4369-469D-487A-B5E0-F23869F65D86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{688B4369-469D-487A-B5E0-F23869F65D86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{688B4369-469D-487A-B5E0-F23869F65D86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{688B4369-469D-487A-B5E0-F23869F65D86}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D588E47-EC61-4EDA-B9B6-A61F383F5A37}
+	EndGlobalSection
+EndGlobal
