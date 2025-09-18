@@ -1,55 +1,55 @@
 # MyTeProject.FrontEnd
 
-## Descrição
-Este projeto é uma aplicação ASP.NET Core MVC para gerenciar registros de tempo, despesas e navegação de usuários autenticados. Ele inclui funcionalidades para diferentes papéis de usuário, como Admin, Manager e User.
+## DescriÃ§Ã£o
+Este projeto Ã© uma aplicaÃ§Ã£o ASP.NET Core MVC para gerenciar registros de tempo, despesas e navegaÃ§Ã£o de usuÃ¡rios autenticados. Ele inclui funcionalidades para diferentes papÃ©is de usuÃ¡rio, como Admin, Manager e User.
 
 ## Estrutura do Projeto
-O projeto está organizado da seguinte forma:
+O projeto estÃ¡ organizado da seguinte forma:
 
-- **Controllers**: Contém os controladores que gerenciam as requisições HTTP e retornam as respostas apropriadas.
-- **Models**: Contém as classes de modelo que representam os dados da aplicação.
-- **Services**: Contém as classes de serviço que implementam a lógica de negócios e interagem com APIs externas.
-- **Utils**: Contém utilitários e enums usados em todo o projeto.
+- **Controllers**: ContÃ©m os controladores que gerenciam as requisiÃ§Ãµes HTTP e retornam as respostas apropriadas.
+- **Models**: ContÃ©m as classes de modelo que representam os dados da aplicaÃ§Ã£o.
+- **Services**: ContÃ©m as classes de serviÃ§o que implementam a lÃ³gica de negÃ³cios e interagem com APIs externas.
+- **Utils**: ContÃ©m utilitÃ¡rios e enums usados em todo o projeto.
 
 ## Controllers
 
 ### UserNavigationController
-Gerencia a navegação do usuário autenticado, incluindo visualização e postagem de registros de tempo, códigos de cobrança e despesas.
+Gerencia a navegaÃ§Ã£o do usuÃ¡rio autenticado, incluindo visualizaÃ§Ã£o e postagem de registros de tempo, cÃ³digos de cobranÃ§a e despesas.
 
 ### AdminController
-Gerencia a navegação e funcionalidades específicas para usuários com papéis de Admin e Manager.
+Gerencia a navegaÃ§Ã£o e funcionalidades especÃ­ficas para usuÃ¡rios com papÃ©is de Admin e Manager.
 
 ## Services
 
 ### DepartmentService
-Implementa a lógica de negócios para gerenciar departamentos, incluindo a obtenção de departamentos com dependências e filtros.
+Implementa a lÃ³gica de negÃ³cios para gerenciar departamentos, incluindo a obtenÃ§Ã£o de departamentos com dependÃªncias e filtros.
 
 ## Models
 
 ### UserModel
-Representa um usuário no sistema, incluindo informações como nome, email, senha, papel, e outros detalhes.
+Representa um usuÃ¡rio no sistema, incluindo informaÃ§Ãµes como nome, email, senha, papel, e outros detalhes.
 
 ### ExpenseModel
-Representa uma despesa, incluindo informações como data, valor, descrição, e código de cobrança.
+Representa uma despesa, incluindo informaÃ§Ãµes como data, valor, descriÃ§Ã£o, e cÃ³digo de cobranÃ§a.
 
 ### TimeRecordModel
-Representa um registro de tempo, incluindo informações como data, tempo apontado, e código de cobrança.
+Representa um registro de tempo, incluindo informaÃ§Ãµes como data, tempo apontado, e cÃ³digo de cobranÃ§a.
 
 ### FortnightModel
-Representa um período de quinzena, incluindo uma lista de registros de tempo.
+Representa um perÃ­odo de quinzena, incluindo uma lista de registros de tempo.
 
 ### DepartmentModel
-Representa um departamento, incluindo informações como nome, email de contato, e quantidade de funcionários.
+Representa um departamento, incluindo informaÃ§Ãµes como nome, email de contato, e quantidade de funcionÃ¡rios.
 
-## Instalação
+## InstalaÃ§Ã£o
 
-1. Clone o repositório:
-git clone https://github.com/seu-usuario/MyTeProject.FrontEnd.git
+1. Clone o repositÃ³rio:
+git clone [https://github.com/seu-usuario/MyTeProject.FrontEnd.git](https://github.com/BrunaBaria/Estudos-Asp.Net-Impacta/tree/main/Projeto-final-MyTe)
 
-2. Navegue até o diretório do projeto:
+2. Navegue atÃ© o diretÃ³rio do projeto:
 cd MyTeProject.FrontEnd
 
-3. Restaure as dependências do projeto: 
+3. Restaure as dependÃªncias do projeto: 
 dotnet restore
 
 4. Compile o projeto:
@@ -60,22 +60,22 @@ dotnet run
 
 ## Uso
 
-### Navegação de Usuário
-- **/UserNavigation/Index**: Redireciona para a visualização de registros de tempo.
+### NavegaÃ§Ã£o de UsuÃ¡rio
+- **/UserNavigation/Index**: Redireciona para a visualizaÃ§Ã£o de registros de tempo.
 - **/UserNavigation/TimeRecord**: Visualiza e posta registros de tempo.
-- **/UserNavigation/ChargeCode**: Visualiza e posta códigos de cobrança.
+- **/UserNavigation/ChargeCode**: Visualiza e posta cÃ³digos de cobranÃ§a.
 - **/UserNavigation/Expenses**: Visualiza e posta despesas.
 
-### Administração
-- **/Admin/Index**: Página inicial para administradores e gerentes.
+### AdministraÃ§Ã£o
+- **/Admin/Index**: PÃ¡gina inicial para administradores e gerentes.
 
-## Contribuição
-1. Faça um fork do projeto.
+## ContribuiÃ§Ã£o
+1. FaÃ§a um fork do projeto.
 2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`).
-3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`).
-4. Faça o push para a branch (`git push origin feature/nova-feature`).
+3. Commit suas mudanÃ§as (`git commit -m 'Adiciona nova feature'`).
+4. FaÃ§a o push para a branch (`git push origin feature/nova-feature`).
 5. Abra um Pull Request.
 
-## Licença
-Este projeto está licenciado sob a [MIT License](LICENSE).
+## LicenÃ§a
+Este projeto estÃ¡ licenciado sob a [MIT License](LICENSE).
 
