@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fundamentos.CSharp.Sobrecarga.Metodo", "Fundamentos.CSharp.Sobrecarga.Metodo.csproj", "{AADBCCDE-7246-4DC9-9324-74BB65BEB4CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AADBCCDE-7246-4DC9-9324-74BB65BEB4CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AADBCCDE-7246-4DC9-9324-74BB65BEB4CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AADBCCDE-7246-4DC9-9324-74BB65BEB4CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AADBCCDE-7246-4DC9-9324-74BB65BEB4CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E366666-337F-4793-B9A1-84C97413BB2C}
+	EndGlobalSection
+EndGlobal

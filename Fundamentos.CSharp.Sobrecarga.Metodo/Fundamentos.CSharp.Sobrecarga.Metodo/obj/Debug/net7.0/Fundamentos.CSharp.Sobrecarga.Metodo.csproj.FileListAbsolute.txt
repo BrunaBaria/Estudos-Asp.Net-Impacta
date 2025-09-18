@@ -1,0 +1,14 @@
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Sobrecarga.Metodo\bin\Debug\net7.0\Fundamentos.CSharp.Sobrecarga.Metodo.exe
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Sobrecarga.Metodo\bin\Debug\net7.0\Fundamentos.CSharp.Sobrecarga.Metodo.deps.json
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Sobrecarga.Metodo\bin\Debug\net7.0\Fundamentos.CSharp.Sobrecarga.Metodo.runtimeconfig.json
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Sobrecarga.Metodo\bin\Debug\net7.0\Fundamentos.CSharp.Sobrecarga.Metodo.dll
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Sobrecarga.Metodo\bin\Debug\net7.0\Fundamentos.CSharp.Sobrecarga.Metodo.pdb
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Sobrecarga.Metodo\obj\Debug\net7.0\Fundamentos.CSharp.Sobrecarga.Metodo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Sobrecarga.Metodo\obj\Debug\net7.0\Fundamentos.CSharp.Sobrecarga.Metodo.AssemblyInfoInputs.cache
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Sobrecarga.Metodo\obj\Debug\net7.0\Fundamentos.CSharp.Sobrecarga.Metodo.AssemblyInfo.cs
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Sobrecarga.Metodo\obj\Debug\net7.0\Fundamentos.CSharp.Sobrecarga.Metodo.csproj.CoreCompileInputs.cache
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Sobrecarga.Metodo\obj\Debug\net7.0\Fundamentos.CSharp.Sobrecarga.Metodo.dll
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Sobrecarga.Metodo\obj\Debug\net7.0\refint\Fundamentos.CSharp.Sobrecarga.Metodo.dll
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Sobrecarga.Metodo\obj\Debug\net7.0\Fundamentos.CSharp.Sobrecarga.Metodo.pdb
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Sobrecarga.Metodo\obj\Debug\net7.0\Fundamentos.CSharp.Sobrecarga.Metodo.genruntimeconfig.cache
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Sobrecarga.Metodo\obj\Debug\net7.0\ref\Fundamentos.CSharp.Sobrecarga.Metodo.dll
