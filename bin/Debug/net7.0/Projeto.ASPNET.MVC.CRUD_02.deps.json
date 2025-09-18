@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Projeto.ASPNET.MVC.CRUD_02/1.0.0": {
+        "runtime": {
+          "Projeto.ASPNET.MVC.CRUD_02.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Projeto.ASPNET.MVC.CRUD_02/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
