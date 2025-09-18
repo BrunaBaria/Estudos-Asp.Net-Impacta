@@ -1,0 +1,47 @@
+﻿@*
+   definir a comunicação entre a view e o model. O model específico para esta view é AppUser. Será usado, novamente, pois: o registro selecionado/identificado para alteração/atualização tem origem a partir da entity
+*@
+
+@model AppUser
+
+@{
+    ViewData["Title"] = "Atualizar/Alterar";
+}
+
+@* definição da estrutura html necessária*@
+
+<h3 class="bg-info text-white">@ViewData["Title"]</h3>
+
+<a asp-action="Index" class="btn btn-secondary">Listar</a>
+
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<form method="post"> @* a prop idRegistro é custonm (costumizada por nós), portanto precisa indicar o forma como um elemento generalizado de "transporte" de dados*@
+    <div class="form-group">
+        <label asp-for="Id">Id</label>
+        <input type="text" asp-for="Id" class="form-control" disabled/>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="UserName">Nome</label>
+        <input type="text" asp-for="UserName" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email">Email</label>
+        <input type="email" asp-for="Email" class="form-control" />
+    </div>
+
+   <!-- <div class="form-group">
+        <label asp-for="PasswordHash">Senha</label>
+        <input type="password" asp-for="PasswordHash" class="form-control"/>
+     </div>-->
+
+
+    <div class="form-group">
+        <label for="password">Senha</label>
+        <input type="password" name="password" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Atualizar</button>
+</form>
