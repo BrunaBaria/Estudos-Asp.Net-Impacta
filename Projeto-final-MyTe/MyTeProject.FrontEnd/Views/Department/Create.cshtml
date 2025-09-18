@@ -1,0 +1,63 @@
+﻿@model DepartmentModel
+
+@{
+    ViewData["Header"] = "Admin";
+}
+
+
+<section class="bg_crud">
+    <h3 class="text-start p-2">MyTE - Department Management</h3>
+    <form method="post">
+        <div class="div_form d-flex flex-column justify-content-start">
+            <span class="div_titulo">Department Data</span>
+            <div class="input-group d-flex justify-content-start">
+                <i class="bi bi-briefcase input-group-text"></i>
+                <input type="text" asp-for="Name" class="form-control input-dep" placeholder="Department Name" aria-describedby="basic-addon-1" />
+            </div>
+            <span asp-validation-for="Name" class="text-danger"></span>
+
+            <br />
+            <div class="input-group d-flex justify-content-start">
+                <i class="bi bi-envelope input-group-text"></i>
+                <input type="email" asp-for="ContactEmail" class="form-control input-dep" placeholder="Department Contact Email" aria-describedby="basic-addon-1" />
+            </div>
+            <span asp-validation-for="ContactEmail" class="text-danger"></span>
+
+
+        </div>
+        <div class="container-btn">
+            <a class="btn cancel-btn text-black" asp-controller="Department" asp-action="Index">Cancel</a>
+            <button type="submit" class="btn save-btn text-white ">Save</button>
+        </div>
+    </form>
+</section>
+
+<!--  successModal  -->
+<div id="successModal" class="modal fade" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fs-5">Well done!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Save successfully</p>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-outline-orange" asp-controller="Department" asp-action="Index">Close</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@if (ViewData["Success"] != null)
+{
+    @section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#successModal').modal('show');
+        });
+    </script>
+    }
+}

@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MyTeProject.FrontEnd.styles.css" asp-append-version="true" />
+</head>
+@{
+    ViewData["bodyId"] = ViewData["Header"] == "Admin" ? "body_admin" : "avanade_background_image";
+}
+<body id="@ViewData["bodyId"]">
+    @if (ViewData["Header"] == null)
+    {
+        <!--Header tela de Login-->
+    }
+    else if (ViewData["Header"].Equals("User"))
+    {
+        <!--Header tela do User-->
+        <header class="fixed-top">
+            <nav class="navbar container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="UserNavigation" asp-action="TimeRecord">My Time & Expenses</a>
+                <section class="d-flex align-itens-center">
+                    <div class="d-flex flex-column align-items-end pe-3">
+                        <span>Hi, @ViewBag.User.Name</span>
+                        <span>Your ID: @ViewBag.User.Id</span>
+                    </div>
+                    <button id="btn-perfil-user" class="btn" data-bs-toggle="modal" data-bs-target="#perfilUserModal">
+                        <img src="~/assets/perfil_icon.png" />
+                    </button>
+                </section>
+            </nav>
+        </header>
+
+        <div id="perfilUserModal" class="modal fade" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body flex-center">
+                        <img src="~/assets/perfil_icon.png" />
+                        <br />
+                        <span>User: @ViewBag.User?.Name</span>
+                        <span>ID: @ViewBag.User?.Id</span>
+                        <span>Location: @ViewBag.User?.Location</span>
+                        <span>department: @ViewBag.User?.Department</span>
+                        <span>Role: @ViewBag.User?.Role</span>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-evenly">
+                        @if (ViewBag.User?.Role != EnumRole.User)
+                        {
+                            <a class="btn btn-outline-orange" asp-controller="Admin" asp-action="Index">Home Admin</a>
+                        }<a asp-controller="Account" asp-action="Logout" class="btn btn-outline-orange">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else if (ViewData["Header"].Equals("Admin"))
+    {
+
+        <nav class="navbar bg-body-tertiary fixed-top">
+
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <i class="bi bi-list icon-orange"></i>
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <div class="container-logo">
+                            <img class="avanade_logo_white" src="~/assets/Avanade_White_Logo_RGB.png" alt="Avanade Logo" />
+                        </div>
+
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="navbar-brand" asp-area="" asp-controller="Admin" asp-action="Index">My Profile</a>
+                            </li>
+                            @if (ViewBag.User?.Role == EnumRole.Admin)
+                            {
+                                <li class="nav-item">
+                                    <a class="navbar-brand" asp-area="" asp-controller="User" asp-action="Index">User Management</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="navbar-brand" asp-area="" asp-controller="Department" asp-action="Index">Department Management</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="navbar-brand" asp-area="" asp-controller="WBS" asp-action="Index">WBS Management</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="navbar-brand" asp-area="" asp-controller="Location" asp-action="Index">Location Management</a>
+                                </li>
+                            }
+                            <li class="nav-item">
+                                <a class="navbar-brand" asp-area="" asp-controller="UserNavigation" asp-action="Index">My Time & Expenses</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="navbar-brand" asp-controller="Manager" asp-action="GetReport">Reports</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <section class="d-flex align-itens-center">
+                    <div class="d-flex flex-column align-items-end pe-3">
+                        <span>Hi, @ViewBag.User.Name</span>
+                        <span>Your ID: @ViewBag.User.Id</span>
+                    </div>
+                    <button id="btn-perfil-user" class="btn" data-bs-toggle="modal" data-bs-target="#perfilUserModal">
+                        <img src="~/assets/perfil_icon.png" />
+                    </button>
+                </section>
+            </div>
+
+        </nav>
+
+        <div id="perfilUserModal" class="modal fade" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body flex-center">
+                        <img src="~/assets/perfil_icon.png" />
+                        <br />
+                        <span>User: @ViewBag.User?.Name</span>
+                        <span>ID: @ViewBag.User?.Id</span>
+                        <span>Location: @ViewBag.User?.Location</span>
+                        <span>department: @ViewBag.User?.Department</span>
+                        <span>Role: @ViewBag.User?.Role</span>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-evenly">
+                        <a asp-controller="Account" asp-action="Logout" class="btn btn-outline-orange">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="container h-100">
+        <main role="main" class="pb-3 h-100 flex-center">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top text-muted fixed-bottom">
+        <div class="flex-center p-3">
+            &copy; @DateTime.Now.Year - MyTeProject - Avanade. All Rights Reserved.
+        </div>
+    </footer>
+    <!--  errorsModal  -->
+    <div id="errorsModal" class="modal fade" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fs-5">Error!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>@ViewData["Errors"]</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-orange" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+    @if (ViewData["Errors"] != null)
+    {
+
+        <script>
+            $(document).ready(function () {
+                $('#errorsModal').modal('show');
+            });
+        </script>
+
+    }
+
+
+</body>
+</html>

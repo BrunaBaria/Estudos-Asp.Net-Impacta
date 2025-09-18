@@ -1,0 +1,148 @@
+﻿@*
+    View responsável pelo CRUD de registros de horas dos usuários autenticados
+*@
+@{
+    ViewData["Title"] = "MyTE";
+    ViewData["Header"] = "User";
+
+    var expenses = new List<dynamic>()
+        {
+            new { Date = new DateOnly(2024, 5, 1), Type = "Transport", WBS = "A301015", Value=45, FileName = "Uber - Ida ao cliente XPTO" },
+            new { Date = new DateOnly(2024, 5, 3), Type = "Alimentation", WBS = "A301015", Value=70, FileName = "Conta almoço com cliente XPTO" }
+        }.OrderByDescending(x => x.Date);
+}
+
+<section id="user-background">
+    <section id="user-navigation" class="d-flex justify-content-between">
+        <div class="navigation-buttons d-flex justify-content-between">
+            <a asp-controller="UserNavigation" asp-action="TimeRecord" class="btn btn-orange flex-center me-2">Time</a>
+            <a asp-controller="UserNavigation" asp-action="Expenses" class="btn btn-orange-light flex-center me-2">Expenses</a>
+            <a asp-controller="UserNavigation" asp-action="ChargeCode" class="btn btn-orange flex-center me-2">Charge Codes WBS</a>
+        </div>
+        <div class="navigation-date d-flex align-items-center">
+            <a class="ancor-orange"><i class="bi bi-caret-left-fill"></i></a>
+            <select class="form-select form-orange">
+                <option>04/15/2024</option>
+                <option selected>05/01/2024</option>
+                <option>05/15/2024</option>
+                <option>06/01/2024</option>
+                <option>06/15/2024</option>
+                <option>07/01/2024</option>
+                <option>07/15/2024</option>
+            </select>
+            <a class="ancor-orange"><i class="bi bi-caret-right-fill"></i></a>
+        </div>
+    </section>
+
+    <section id="section-form" class="mt-3">
+        <form method="post" id="expense-form">
+
+
+            <input type="date" class="form-control" />
+
+            <select class="form-select">
+                <option disabled selected>Select a Expense Type</option>
+                <option>Transport</option>
+                <option>Alimentation</option>
+                <option>Travel</option>
+            </select>
+
+            <select class="form-select">
+                <option disabled selected>Select a WBS</option>
+                <option>Birthday - Day off [957X05]</option>
+                <option>Holiday [970X00]</option>
+                <option>Implementation and Development [A301015]</option>
+                <option>Illness [950X00]</option>
+                <option>No Task [730X86]</option>
+            </select>
+
+            <input type="number" class="form-control" placeholder="Value [R$]" step="0.01" />
+
+            <input type="file" class="form-control" />
+            <button id="btn-submit-expense" type="button" class="btn btn-orange btn-add" data-bs-toggle="modal" data-bs-target="#submissionValidationModal">+</button>
+
+            <!-- Modal for submission validation, wich effectively has the submit button -->
+            <div id="submissionValidationModal" class="modal fade" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title fs-5">Attention!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Do you really want to submit the declared Expenses?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-orange" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-orange">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-light">
+                <!--------------- Header --------------->
+                <thead class="table-secondary">
+                    <tr class="align-middle">
+                        <th scope="col">Date</th>
+                        <th scope="col">Type of Expense</th>
+                        <th scope="col">WBS</th>
+                        <th scope="col">R$</th>
+                        <th scope="col">File</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var expense in expenses)
+                    {
+                        <tr>
+                            <td>@expense.Date</td>
+                            <td>@expense.Type</td>
+                            <td>@expense.WBS</td>
+                            <td>@expense.Value.ToString("0.00")</td>
+                            <td><a href="#">@expense.FileName</a></td>
+                            <td>
+                                <div class="d-flex justify-content-evenly">
+                                    <button class="btn p-0 m-0"><i class="bi bi-pencil-square"></i></button>
+                                    <button class="btn p-0 m-0"><i class="bi bi-trash3"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </section>
+</section>
+
+<!--  successModal  -->
+<div id="successModal" class="modal fade" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fs-5">Well done!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Sending successfully</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-orange" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@if (ViewData["Success"] != null)
+{
+    @section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#successModal').modal('show');
+        });
+    </script>
+    }
+}

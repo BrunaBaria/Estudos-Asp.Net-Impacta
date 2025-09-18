@@ -1,0 +1,36 @@
+﻿@*
+
+*@
+@model LoginModel
+@{
+    ViewData["Title"] = "MyTE Login";
+}
+
+<section id="form-login" class="flex-center">
+    <div class="d-flex align-items-center">
+        <img class="avanade_logo" src="~/assets/Avanade_Logo.png" alt="Avanade Logo" />
+    </div>
+    <div class="w-50">
+
+        <form asp-action="Login" method="post" class="flex-center">
+            <div class="form-floating w-100">
+                <input id="email" type="email" asp-for="Email" class="form-control input-login" placeholder="Enter your email:" />
+                <label asp-for="Email">Enter your email:</label>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-floating w-100">
+                <input id="password" asp-for="Password" type="password" class="form-control input-login" placeholder="Enter your password:" />
+                <label asp-for="Password">Enter your password:</label>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <br />
+            <a href="mailto:suporte@email.com" class="me-auto">Forgot my password</a>
+            <br />
+            <button type="submit" class="btn btn-orange-light ms-auto">Login</button>
+        </form>
+
+    </div>
+
+</section>
+

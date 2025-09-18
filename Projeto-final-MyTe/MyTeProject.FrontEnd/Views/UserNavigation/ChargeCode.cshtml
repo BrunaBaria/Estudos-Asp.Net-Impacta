@@ -1,0 +1,144 @@
+﻿@*
+*@
+@{
+    ViewData["Title"] = "MyTE";
+    ViewData["Header"] = "User";
+
+    var wbsList = new List<dynamic>()
+        {
+            new { Code = "957X05", Type = "Non Chargeable", Description = "Birthday - Day off", Display = true },
+            new { Code = "970X00", Type = "Non Chargeable", Description = "Holiday", Display = true },
+            new { Code = "A301015", Type = "Chargeable", Description = "Implementation and Development", Display = true },
+            new { Code = "950X00", Type = "Non Chargeable", Description = "Illness", Display = true },
+            new { Code = "730X86", Type = "Non Chargeable", Description = "No Task", Display = true },
+            new { Code = "870X66", Type = "Chargeable", Description = "Maternity Leave", Display = false },
+            new { Code = "5643102", Type = "Chargeable", Description = "Vacation", Display = false }
+        }.OrderBy(x => x.Description);
+}
+<section id="user-background">
+    <section id="user-navigation" class="d-flex justify-content-between">
+        <div class="navigation-buttons d-flex justify-content-start">
+            <a asp-controller="UserNavigation" asp-action="TimeRecord" class="btn btn-orange flex-center me-2 link">Time</a>
+            <a asp-controller="UserNavigation" asp-action="Expenses" class="btn btn-orange flex-center me-2 link">Expenses</a>
+            <a asp-controller="UserNavigation" asp-action="ChargeCode" class="btn btn-orange-light flex-center me-2">Charge Codes WBS</a>
+        </div>
+    </section>
+
+    <section id="section-form" class="w-75 mt-3">
+        <form method="post" class="flex-center">
+            <div class="table-responsive">
+                <table class="table table-bordered table-light">
+                    <!--------------- Header --------------->
+                    <thead class="table-secondary">
+                        <tr class="align-middle">
+                            <th scope="col">Display</th>
+                            <th scope="col">WBS Code</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var wbs in wbsList)
+                        {
+                            <tr>
+                                <td class="text-center">
+                                    <div class=" form-switch">
+                                        @if (wbs.Display)
+                                        {
+                                            <input class="form-check-input" type="checkbox" role="switch" id="@wbs.Code" checked />
+                                        }
+                                        else
+                                        {
+                                            <input class="form-check-input" type="checkbox" role="switch" id="@wbs.Code" />
+                                        }
+                                    </div>
+                                </td>
+                                <td>@wbs.Code</td>
+                                <td>@wbs.Type</td>
+                                <td>@wbs.Description</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="align-self-end d-flex justify-content-end mt-1">
+                <button type="submit" class="btn btn-orange">Save</button>
+            </div>
+
+            <!--  pendingChangesModal  -->
+            <div id="pendingChangesModal" class="modal fade" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title fs-5">Attention!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Do you really want to exit without saving your changes?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a id="btnDiscardChanges" class="btn btn-outline-orange">Exit</a>
+                            <button type="submit" class="btn btn-orange">Save</button>
+                            <a href=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </section>
+</section>
+
+
+<!--  successModal  -->
+<div id="successModal" class="modal fade" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fs-5">Well done!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Saved successfully</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-orange" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @if (ViewData["Success"] != null)
+    {
+        <script>
+            $(document).ready(function () {
+                $('#successModal').modal('show');
+            });
+        </script>
+    }
+
+    <script>
+        var btnDiscardChanges = document.getElementById('btnDiscardChanges');
+
+        document.querySelectorAll('.form-check-input').forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                window.hasUnsavedChanges = true;
+            })
+        });
+
+        document.querySelectorAll('.link').forEach(link => {
+            link.addEventListener('click', event => {
+                console.log(event.target.href);
+                btnDiscardChanges.href = event.target.href;  // Salvo o link para recirecioná-lo posteriormente
+
+                if (window.hasUnsavedChanges) {
+                    $('#pendingChangesModal').modal('show');
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+}

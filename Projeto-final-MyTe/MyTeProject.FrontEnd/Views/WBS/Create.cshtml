@@ -1,0 +1,71 @@
+﻿@model WBSModel
+
+@{
+    ViewData["Header"] = "Admin";
+    var wbsTypes = ViewData["WBSTypes"] as List<SelectListItem>;
+}
+
+<section class="bg_crud">
+    <h3 class="text-start p-2">MyTE - WBS Management</h3>
+    <form method="post">
+        <div class="div_form">
+            <span class="div_titulo">WBS Data</span>
+            <div class="d-flex justify-content-lg-between gap-4 row">
+                <div class="input-group col">
+                    <i class="bi bi-upc-scan input-group-text"></i>
+                    <input type="text" asp-for="ChargeCode" class="form-control input-dep " placeholder="Charge Code" aria-describedby="basic-addon-1" />
+
+                </div>
+                <span asp-validation-for="ChargeCode" class="text-danger"></span>
+                <div class="input-group col">
+                    <i class="bi bi-ticket input-group-text "></i>
+                    <select type="text" asp-for="WBSTypeId" asp-items="@wbsTypes" class="form-control input-dep" placeholder="Type" aria-describedby="basic-addon-1">
+                        <option value="">Select a WBS Type</option>
+                    </select>
+
+                </div>
+                <span asp-validation-for="WBSTypeId" class="text-danger"></span>
+                <div class="input-group">
+                    <i class="bi bi-text-wrap input-group-text "></i>
+                    <input type="text" asp-for="Description" class="form-control input-dep " placeholder="Description" aria-describedby="basic-addon-1" />
+                    
+                </div>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="container-btn">
+            <a class="btn cancel-btn text-black" asp-controller="WBS" asp-action="Index">Cancel</a>
+            <button type="submit" class="btn save-btn text-white ">Save</button>
+        </div>
+    </form>
+</section>
+
+<!--  successModal  -->
+<div id="successModal" class="modal fade" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fs-5">Well done!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Save successfully</p>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-outline-orange" asp-controller="WBS" asp-action="Index">Close</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@if (ViewData["Success"] != null)
+{
+    @section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#successModal').modal('show');
+        });
+    </script>
+    }
+}

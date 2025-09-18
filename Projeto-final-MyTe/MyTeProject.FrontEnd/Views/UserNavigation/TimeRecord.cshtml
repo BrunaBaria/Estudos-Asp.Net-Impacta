@@ -1,0 +1,354 @@
+﻿@model FortnightModel
+
+@{
+    ViewData["Title"] = "MyTE";
+    ViewData["Header"] = "User";
+    var listOfWBS = ViewData["ListOfWBS"] as List<SelectListItem>;
+    var listOfNavigationsDates = ViewData["ListOfNavigationsDates"] as List<SelectListItem>;
+    var userAuthenticated = ViewData["UserAuthenticated"] as UserModel;
+    List<DateTime> fortnightDates = Model.TimeRecords.Select(e => e.Date.Value).Distinct().ToList();
+    int rangeOfTimeRecord = Model.TimeRecords.Count / 3;
+    List<List<TimeRecordModel>> listOfTimeRecords = new List<List<TimeRecordModel>>
+    {
+        Model.TimeRecords.Skip(0 * rangeOfTimeRecord).Take(rangeOfTimeRecord).ToList(),
+        Model.TimeRecords.Skip(1 * rangeOfTimeRecord).Take(rangeOfTimeRecord).ToList(),
+        Model.TimeRecords.Skip(2 * rangeOfTimeRecord).Take(rangeOfTimeRecord).ToList()
+    };
+
+    DateTime todayFortnight = fortnightDates.Min();
+    DateTime nextDate, previousDate;
+
+    if (todayFortnight.Day == 1)
+    {
+        nextDate = new DateTime(todayFortnight.Year, todayFortnight.Month, 16);
+        previousDate = new DateTime(todayFortnight.AddMonths(-1).Year, todayFortnight.AddMonths(-1).Month, 16);
+    }
+    else
+    {
+        nextDate = new DateTime(todayFortnight.AddMonths(1).Year, todayFortnight.AddMonths(1).Month, 1);
+        previousDate = new DateTime(todayFortnight.Year, todayFortnight.Month, 1);
+    }
+}
+<section id="user-background">
+    <section id="user-navigation" class="d-flex justify-content-between">
+        <div class="navigation-buttons d-flex justify-content-between">
+            <a asp-controller="UserNavigation" asp-action="TimeRecord" class="btn btn-orange-light flex-center me-2">Time</a>
+            <a asp-controller="UserNavigation" asp-action="Expenses" class="btn btn-orange flex-center me-2">Expenses</a>
+            <a asp-controller="UserNavigation" asp-action="ChargeCode" class="btn btn-orange flex-center me-2">Charge Codes WBS</a>
+        </div>
+        <div class="navigation-date d-flex align-items-center">
+            <a asp-controller="UserNavigation" asp-action="TimeRecord" asp-route-date="@previousDate" class="ancor-orange"><i class="bi bi-caret-left-fill"></i></a>
+            <select asp-items="listOfNavigationsDates" class="form-select form-orange">
+            </select>
+            <a asp-controller="UserNavigation" asp-action="TimeRecord" asp-route-date="@nextDate" class="ancor-orange"><i class="bi bi-caret-right-fill"></i></a>
+        </div>
+    </section>
+
+    <section id="section-form" class="mt-3">
+        <form method="post" class="flex-center">
+            <div class="table-responsive">
+                <table class="table table-bordered table-light text-center">
+                    <!--------------- Header --------------->
+                    <thead>
+                        <tr class="text-center align-middle">
+                            <th scope="col">Charge Codes</th>
+                            @foreach (var date in fortnightDates)
+                            {
+                                if (date.DayOfWeek == DayOfWeek.Sunday || date.DayOfWeek == DayOfWeek.Saturday)
+                                {
+                                    <th scope="col" class="table-secondary">
+                                        @date.ToString("ddd")<br />@date.Day
+                                    </th>
+                                }
+                                else
+                                {
+                                    <th scope="col">
+                                        @date.ToString("ddd")<br />@date.Day
+                                    </th>
+                                }
+                            }
+                            <th scope="col" class="table-tertiary">Hrs<br />Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--------------- Location --------------->
+                        <tr class="text-center align-middle">
+                            <td scope="row">Location</td>
+                            @foreach (var date in fortnightDates)
+                            {
+                                if (date.DayOfWeek == DayOfWeek.Sunday || date.DayOfWeek == DayOfWeek.Saturday)
+                                {
+                                    <td class="table-secondary">@userAuthenticated.Location</td>
+                                }
+                                else
+                                {
+                                    <td>@userAuthenticated.Location</td>
+                                }
+                            }
+                            <td class="table-tertiary">@userAuthenticated.Location</td>
+                        </tr>
+
+                        <!--------------- Time Register --------------->
+                        @for (int i = 0; i < 3; i++)
+                        {
+                            string classWbsName = $"wbsInput{i}";
+                            string idWbsName = $"idWbsInput{i}";
+                            string inputRowName = $"input-row-{i}";
+                            string resultRowName = $"result-row-{i}";
+
+                            <tr class="text-center align-middle">
+                                <td>
+                                    <select id="@idWbsName" asp-for="TimeRecords[rangeOfTimeRecord * i].WBSId" asp-items="listOfWBS" class="form-control form-control-table">
+                                        <option></option>
+                                    </select>
+                                </td>
+                                @for (int j = 0; j < rangeOfTimeRecord; j++)
+                                {
+                                    string inputColumnName = $"input-column-{j}";
+
+                                    if (Model.TimeRecords[rangeOfTimeRecord * i + j].CanAppointToday == false)
+                                    {
+                                        <td class="table-secondary">
+                                            <input disabled asp-for="TimeRecords[rangeOfTimeRecord * i + j].AppointedTime" value="0" class="form-control form-control-table number-clear text-center input-value @inputRowName @inputColumnName" />
+                                            <input type="hidden" asp-for="TimeRecords[rangeOfTimeRecord * i + j].Date" />
+                                            <input class="@classWbsName" type="hidden" asp-for="TimeRecords[rangeOfTimeRecord * i + j].WBSId" />
+                                            <input type="hidden" asp-for="TimeRecords[rangeOfTimeRecord * i + j].CanAppointToday" />
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            <input asp-for="TimeRecords[rangeOfTimeRecord * i + j].AppointedTime" class="form-control form-control-table number-clear text-center input-value @inputRowName @inputColumnName" oninput="updateResult()" />
+                                            <input type="hidden" asp-for="TimeRecords[rangeOfTimeRecord * i + j].Date" />
+                                            <input class="@classWbsName" type="hidden" asp-for="TimeRecords[rangeOfTimeRecord * i + j].WBSId" />
+                                            <input type="hidden" asp-for="TimeRecords[rangeOfTimeRecord * i + j].CanAppointToday" />
+                                        </td>
+                                    }
+                                }
+
+                                <th id="@resultRowName" class="table-tertiary">0</th>
+                            </tr>
+                        }
+
+                        <!--------------- Work Schedule --------------->
+                        <tr class="text-center align-middle">
+                            <td class="table-secondary">Work Schedule</td>
+                            @{
+                                decimal totalHours = 0;
+                            }
+                            @for (int j = 0; j < fortnightDates.Count; j++)
+                            {
+                                string workScheduleId = $"work-schedule-{j}";
+
+                                if (fortnightDates[j].DayOfWeek == DayOfWeek.Sunday || fortnightDates[j].DayOfWeek == DayOfWeek.Saturday)
+                                {
+                                    <td id="@workScheduleId" class="table-secondary">0.0</td>
+                                }
+                                else
+                                {
+                                    totalHours += userAuthenticated.WorkSchedule.Value;
+                                    <td id="@workScheduleId" class="table-secondary">@userAuthenticated.WorkSchedule</td>
+                                }
+                            }
+
+                            <td class="table-tertiary">@totalHours</td>
+                        </tr>
+
+                        <!--------------- Daily Overtime --------------->
+                        @if (userAuthenticated.AcceptOvertime == true)
+                        {
+                            <tr class="text-center align-middle">
+                                <td>Daily Overtime</td>
+                                @for (int j = 0; j < fortnightDates.Count; j++)
+                                {
+                                    string resultOvertimeName = $"result-overtime-{j}";
+
+                                    if (fortnightDates[j].DayOfWeek == DayOfWeek.Sunday || fortnightDates[j].DayOfWeek == DayOfWeek.Saturday)
+                                    {
+                                        <td id="@resultOvertimeName" class="table-secondary"></td>
+                                    }
+                                    else
+                                    {
+                                        <td id="@resultOvertimeName"></td>
+                                    }
+                                }
+                                @{
+                                    string totalOvertime = "total-overtime";
+                                }
+                                <td id="@totalOvertime" class="table-tertiary">0</td>
+                            </tr>
+                        }
+
+                        <!--------------- Hour per day --------------->
+                        <tr class="text-center align-middle">
+                            <td class="table-tertiary">Hour per day</td>
+                            @for (int j = 0; j < fortnightDates.Count; j++)
+                            {
+                                string resultColumnName = $"result-column-{j}";
+                                <td id="@resultColumnName" class="table-tertiary">0</td>
+                            }
+
+                            @{
+                                string totalColuns = "total-column";
+                            }
+                            <th id="@totalColuns" class="table-tertiary">0</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Modal for submission validation, wich effectively has the submit button -->
+            <div id="submissionValidationModal" class="modal fade" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title fs-5">Attention!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Do you really want to submit the declared Times?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-orange" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-orange">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="d-flex justify-content-end mt-1">
+            <button id="btn-submit-myte" class="btn btn-orange" data-bs-toggle="modal" data-bs-target="#submissionValidationModal">Submit</button>
+        </div>
+    </section>
+</section>
+
+<!--  successModal  -->
+<div id="successModal" class="modal fade" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fs-5">Well done!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Sending successfully</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-orange" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+
+    @if (ViewData["Success"] != null)
+    {
+        <script>
+            $(document).ready(function () {
+                $('#successModal').modal('show');
+            });
+        </script>
+    }
+
+    <script>
+
+        function manipulateWbsIdChange(wbsElement, className) {
+            var wbs = wbsElement.value;
+            var listOfWbsHidden = document.querySelectorAll(className);
+            listOfWbsHidden.forEach(input => {
+                input.value = wbs;
+            });
+        }
+
+        var idWbs1 = document.getElementById("idWbsInput0");
+        var idWbs2 = document.getElementById("idWbsInput1");
+        var idWbs3 = document.getElementById("idWbsInput2");
+        idWbs1.addEventListener("change", () => manipulateWbsIdChange(idWbs1, ".wbsInput0"));
+        idWbs2.addEventListener("change", () => manipulateWbsIdChange(idWbs2, ".wbsInput1"));
+        idWbs3.addEventListener("change", () => manipulateWbsIdChange(idWbs3, ".wbsInput2"));
+
+        function updateResult() {
+            updateRow();
+            updateColumn();
+            updateOvertime();
+        }
+
+        function updateRow() {
+            var inputs = document.getElementsByClassName('input-row-0');
+            var sum = 0;
+            for (var i = 0; i < inputs.length; i++) {
+                sum += parseFloat(inputs[i].value) || 0;
+            }
+            document.getElementById('result-row-0').innerText = sum;
+
+            inputs = document.getElementsByClassName('input-row-1');
+            sum = 0;
+            for (var i = 0; i < inputs.length; i++) {
+                sum += parseFloat(inputs[i].value) || 0;
+            }
+            document.getElementById('result-row-1').innerText = sum;
+
+            inputs = document.getElementsByClassName('input-row-2');
+            sum = 0;
+            for (var i = 0; i < inputs.length; i++) {
+                sum += parseFloat(inputs[i].value) || 0;
+            }
+            document.getElementById('result-row-2').innerText = sum;
+        }
+
+        function updateColumn() {
+            var total = 0;
+
+            for (var j = 0; j < 16; j++) {
+                var className = 'input-column-' + j;
+                var id = 'result-column-' + j;
+                var inputs = document.getElementsByClassName(className);
+
+                if (inputs.length != 0) {
+                    var sum = 0;
+                    for (var i = 0; i < inputs.length; i++) {
+                        if (inputs[i].value !== "") {
+                            sum += parseFloat(inputs[i].value) || 0;
+                        }
+                    }
+                    document.getElementById(id).innerText = sum;
+                    total += sum;
+                }
+            }
+
+            document.getElementById('total-column').innerText = total;
+        }
+
+        function updateOvertime() {
+            var total = 0;
+
+            for (var j = 0; j < 16; j++) {
+
+                var ws = 'work-schedule-' + j;
+                var ot = 'result-overtime-' + j;
+                var pd = 'result-column-' + j;
+
+                var workSchedule = document.getElementById(ws);
+                var overtime = document.getElementById(ot);
+                var perDay = document.getElementById(pd);
+
+                if (workSchedule && overtime && perDay) {
+                    var soma = Math.max(0, parseInt(perDay.innerText) - parseInt(workSchedule.innerText));
+                    total += soma;
+
+                    overtime.innerText = soma;
+                }
+            }
+
+            document.getElementById('total-overtime').innerText = total;
+        }
+        try {
+            updateResult();
+        } catch (ex) {
+            console.log(ex)
+        }
+
+
+    </script>
+}

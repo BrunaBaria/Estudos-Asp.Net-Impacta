@@ -1,0 +1,124 @@
+﻿@{
+    ViewData["Title"] = "MyTE Location Management";
+    ViewData["Header"] = "Admin";
+}
+
+@model IEnumerable<LocationModel>
+
+<div class="full-container">
+
+    <div class="content-container">
+
+        <h2 class="ms-5">MyTE - Location Management</h2>
+        <br />
+        <div class="row">
+            <div class="accordion accordion-flush col-10" id="accordionFilters">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed btn btn-orange-light" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Filters
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse bg-light" data-bs-parent="#accordionFilters">
+                        <div class="accordion-body">
+                            <form>
+                                <div class="d-flex justify-content-between">
+                                    <div class="mx-2">
+                                        <label for="Id">Id</label>
+                                        <input id="Id" type="text" for="Id" class="form-control" placeholder="Id:" />
+
+                                    </div>
+
+                                    <div class="mx-2">
+                                        <label for="Country">Country</label>
+                                        <input id="Country" type="text" for="Country" class="form-control" placeholder="Country:" />
+
+                                    </div>
+                                    <div class="mx-2">
+                                        <label for="State">State</label>
+                                        <input id="State" type="text" for="State" class="form-control" placeholder="State:" />
+
+                                    </div>
+                                    <div class="mx-2">
+                                        <label for="City">City</label>
+                                        <input id="City" type="text" for="City" class="form-control" placeholder="City:" />
+
+                                    </div>
+
+                                </div>
+                                <br />
+                                <div class="d-flex justify-content-evenly">
+                                    <button class="btn btn-outline-orange-light btn-thin">Clean</button>
+                                    <button class="btn btn-orange-light btn-thin">Filter</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+                <a class="add-button btn btn-orange w-100" asp-controller="Location" asp-action="Create">Add</a>
+            </div>
+        </div>
+        <br />
+        <div class="table-container">
+            <table class="table table-striped">
+                <thead>
+                <th>Id</th>
+                <th>State</th>
+                <th>City</th>
+                <th>Actions</th>
+                </thead>
+                <tbody>
+                    @foreach (LocationModel location in Model)
+                    {
+                        string modalId = "DeleteLocation" + location.Id;
+                        <tr>
+                            <td>@location.Id</td>
+                            <td>@location.State</td>
+                            <td>@location.City</td>
+                            <td>
+                                <div class="actions-container">
+                                    <a class="edit-button" asp-controller="Location" asp-action="Update" asp-route-id="@location.Id">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </a>
+                                    <form asp-controller="Location" asp-action="Delete" asp-route-id="@location.Id">
+                                        <button type="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#@modalId">
+                                            <i class="bi bi-trash3"></i>
+                                        </button>
+
+                                        <div id="@modalId" class="modal fade" tabindex="-1" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title fs-5">Attention!</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Do you really want to exclude this @location.State - @location.City Location?</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-outline-orange" data-bs-dismiss="modal">Close</button>
+                                                        <button type="submit" class="btn btn-orange">Confirm</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="footer-container">
+    </div>
+</div>

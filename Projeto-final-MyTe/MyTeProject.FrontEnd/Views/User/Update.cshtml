@@ -1,0 +1,161 @@
+﻿@{
+    ViewData["Header"] = "Admin";
+    var departmentTypes = ViewData["DepartmentTypes"] as List<SelectListItem>;
+    var hiringRegimeTypes = ViewData["HiringRegimeTypes"] as List<SelectListItem>;
+    var locationTypes = ViewData["LocationTypes"] as List<SelectListItem>;
+    var roles = ViewData["Roles"] as List<SelectListItem>;
+}
+
+@model UserModel
+
+
+<section class="bg_crud">
+    <form method="post" class="container">
+        <h3 class="text-start p-2">MyTE - User Management</h3>
+
+        <div class="div_form">
+            <span class="div_titulo">User Data</span>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <i class="bi bi-person-plus-fill input-group-text"></i>
+                            <input type="text" asp-for="Name" class="form-control input-dep " placeholder="User Name" aria-describedby="basic-addon-1" />
+                        </div>
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <div class=" input-group">
+                            <i class="bi bi-briefcase-fill input-group-text "></i>
+                            <select asp-for="HiringRegimeId" asp-items="@hiringRegimeTypes" class="form-control input-dep " placeholder="Hiring Regime" aria-describedby="basic-addon-1">
+                                <option value="">Select a Hiring Regime</option>
+                            </select>
+                        </div>
+                        <span asp-validation-for="HiringRegimeId" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <i class="bi bi-person-vcard-fill input-group-text "></i>
+                            <select asp-for="Role" asp-items="@roles" class="form-control input-dep " placeholder="Role" aria-describedby="basic-addon-1">
+                                <option value="">Select a Role</option>
+                            </select>
+
+                        </div>
+                        <span asp-validation-for="Role" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="mb-3">
+                        <div class="input-group ">
+                            <i class="bi bi-envelope input-group-text "></i>
+                            <input type="text" asp-for="Email" class="form-control input-dep" placeholder="Email" aria-describedby="basic-addon-1" />
+
+                        </div>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <div class="input-group ">
+                            <i class="bi bi-building-fill input-group-text "></i>
+                            <select asp-for="DepartmentId" asp-items="@departmentTypes" class="form-control input-dep " placeholder="Department" aria-describedby="basic-addon-1">
+                                <option value="">Select a Department</option>
+                            </select>
+
+                        </div>
+                        <span asp-validation-for="DepartmentId" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <div class="input-group ">
+                            <i class="bi bi-calendar-check-fill input-group-text "></i>
+                            <input type="date" asp-for="AdmissionDate" class="form-control input-dep " placeholder="Admission Date" aria-describedby="basic-addon-1" />
+
+                        </div>
+                        <span asp-validation-for="AdmissionDate" class="text-danger"></span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <br />
+        <div class="div_form">
+            <span class="div_titulo">Address</span>
+            <div class="row">
+                <div class="col-6 mb-3">
+                    <div class="input-group">
+                        <i class="bi bi-buildings-fill input-group-text"></i>
+                        <select asp-for="LocationId" asp-items="@locationTypes" class="form-control input-dep " placeholder="Location" aria-describedby="basic-addon-1">
+                            <option value="">Select a Location</option>
+                        </select>
+
+                    </div>
+                    <span asp-validation-for="LocationId" class="text-danger"></span>
+                </div>
+
+
+            </div>
+        </div>
+
+        <br />
+        <div class="div_form">
+            <span class="div_titulo">Password</span>
+            <div class="row">
+                <div class="col-6 mb-3">
+                    <div class="input-group">
+                        <i class="bi bi-key-fill input-group-text"></i>
+                        <input type="password" asp-for="Password" class="form-control input-dep " placeholder="Password" aria-describedby="basic-addon-1" />
+
+                    </div>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="col-6 mb-3">
+                    <div class="input-group">
+                        <i class="bi bi-key-fill input-group-text"></i>
+                        <input type="password" asp-for="PasswordConfirm" class="form-control input-dep " placeholder="Password" aria-describedby="basic-addon-1" />
+                    </div>
+                    <span asp-validation-for="PasswordConfirm" class="text-danger"></span>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="container-btn">
+            <a class="btn cancel-btn text-black" asp-controller="User" asp-action="Index">Cancel</a>
+            <button type="submit" class="btn save-btn text-white ">Save</button>
+        </div>
+    </form>
+</section>
+
+
+<!--  successModal  -->
+<div id="successModal" class="modal fade" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fs-5">Well done!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Save successfully</p>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-outline-orange" asp-controller="User" asp-action="Index">Close</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@if (ViewData["Success"] != null)
+{
+    @section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#successModal').modal('show');
+        });
+    </script>
+    }
+}
