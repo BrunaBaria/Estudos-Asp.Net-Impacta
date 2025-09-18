@@ -1,0 +1,14 @@
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Polimorfismo\bin\Debug\net7.0\Fundamentos.CSharp.Polimorfismo.exe
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Polimorfismo\bin\Debug\net7.0\Fundamentos.CSharp.Polimorfismo.deps.json
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Polimorfismo\bin\Debug\net7.0\Fundamentos.CSharp.Polimorfismo.runtimeconfig.json
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Polimorfismo\bin\Debug\net7.0\Fundamentos.CSharp.Polimorfismo.dll
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Polimorfismo\bin\Debug\net7.0\Fundamentos.CSharp.Polimorfismo.pdb
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Polimorfismo\obj\Debug\net7.0\Fundamentos.CSharp.Polimorfismo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Polimorfismo\obj\Debug\net7.0\Fundamentos.CSharp.Polimorfismo.AssemblyInfoInputs.cache
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Polimorfismo\obj\Debug\net7.0\Fundamentos.CSharp.Polimorfismo.AssemblyInfo.cs
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Polimorfismo\obj\Debug\net7.0\Fundamentos.CSharp.Polimorfismo.csproj.CoreCompileInputs.cache
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Polimorfismo\obj\Debug\net7.0\Fundamentos.CSharp.Polimorfismo.dll
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Polimorfismo\obj\Debug\net7.0\refint\Fundamentos.CSharp.Polimorfismo.dll
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Polimorfismo\obj\Debug\net7.0\Fundamentos.CSharp.Polimorfismo.pdb
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Polimorfismo\obj\Debug\net7.0\Fundamentos.CSharp.Polimorfismo.genruntimeconfig.cache
+C:\Users\celio\Desktop\Impacta-DecolaTech\4 - Asp.Net\Fundamentos.CSharp.Polimorfismo\obj\Debug\net7.0\ref\Fundamentos.CSharp.Polimorfismo.dll
