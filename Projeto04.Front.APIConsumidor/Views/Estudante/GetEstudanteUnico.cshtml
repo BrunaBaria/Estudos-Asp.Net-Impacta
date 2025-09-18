@@ -1,0 +1,57 @@
+﻿@model Estudante
+
+@{
+    ViewData["Title"] = "Seleção de registro";
+}
+
+<a asp-action="Index" class="btn btn-sm btn-primary">Lista de registros</a>
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="Id">Id</label>
+        <input name="Id" class="form-control" />
+    </div>
+
+    <div class="text-center">
+        <button type="submit" class="btn btn-sm btn-primary">
+            Obter registro
+        </button>
+    </div>
+</form>
+
+<h2>Registro Selecionado</h2>
+
+@if(Model != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>RA</th>
+                <th>Email</th>
+                <th>Idade</th>
+                <th>Fone</th>
+                <th>Genero</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>           
+          <tr>
+            <td readonly>@Model.Estudante_Id</td>
+            <td>@Model.Estudante_Nome</td>
+            <td>@Model.Estudante_Sobrenome</td>
+            <td>@Model.Estudante_RA</td>
+            <td>@Model.Estudante_Email</td>
+            <td>@Model.Estudante_Idade</td>
+            <td>@Model.Estudante_Fone</td>
+            <td>@Model.Estudante_Genero</td>
+                    
+          </tr>
+            
+        </tbody>
+    </table>
+}

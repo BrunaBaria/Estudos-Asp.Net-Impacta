@@ -1,0 +1,65 @@
+﻿@model Estudante
+
+@{
+    ViewData["Title"] = "Atualização de registro";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<hr />
+
+<div class="row">
+    <form method="post">
+
+        <div class="form-group">
+            <input asp-for="Estudante_Id" type="hidden" class="form-control" />
+        </div>
+
+
+
+
+
+        <div class="form-group">
+            <label asp-for="Estudante_Nome">Nome</label>
+            <input asp-for="Estudante_Nome" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Estudante_Sobrenome">Sobrenome</label>
+            <input asp-for="Estudante_Sobrenome" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Estudante_RA">RA</label>
+            <input asp-for="Estudante_RA" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Estudante_Email">Email</label>
+            <input asp-for="Estudante_Email" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Estudante_Idade">Idade</label>
+            <input asp-for="Estudante_Idade" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Estudante_Fone">Fone</label>
+            <input asp-for="Estudante_Fone" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Estudante_Genero">Genero</label>
+            <input asp-for="Estudante_Genero" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Atualizar" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
+
+<div>
+    <a asp-action="Index">Listar registros</a>
+</div>

@@ -1,0 +1,62 @@
+﻿
+
+@model IEnumerable<Estudante>
+
+@{
+    ViewData["Title"] = "Listagem de registros";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p>
+    <a asp-controller="Estudante" asp-action="AddEstudante" class="btn btn-sm btn-primary"> Novo registro</a>
+</p>
+<p>
+    <a asp-controller="Estudante" asp-action="GetEstudanteUnico" class="btn btn-sm btn-primary">Detalhes</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>RA</th>
+            <th>Email</th>
+            <th>Idade</th>
+            <th>Fone</th>
+            <th>Genero</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td readonly>@item.Estudante_Id</td>
+                <td>@item.Estudante_Nome</td>
+                <td>@item.Estudante_Sobrenome</td>
+                <td>@item.Estudante_RA</td>
+                <td>@item.Estudante_Email</td>
+                <td>@item.Estudante_Idade</td>
+                <td>@item.Estudante_Fone</td>
+                <td>@item.Estudante_Genero</td>
+                <td>
+                    <td>
+                        <a asp-action="UpdateEstudante" 
+                           asp-route-id="@item.Estudante_Id" 
+                        >Atual.</a>
+                    </td>
+                    <td>
+                        <form asp-action="DeleteEstudante" method="post">
+                            <input type="hidden" value="@item.Estudante_Id" name="id" />
+
+                            <button type="submit">Excluir</button>
+                        </form>
+                    </td>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
