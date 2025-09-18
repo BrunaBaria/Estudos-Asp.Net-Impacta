@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\celio\\Desktop\\Impacta-DecolaTech\\4 - Asp.Net\\Projeto.ASPNET.MVC.CRUD_02\\Projeto.ASPNET.MVC.CRUD_02.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\celio\\Desktop\\Impacta-DecolaTech\\4 - Asp.Net\\Projeto.ASPNET.MVC.CRUD_02\\Projeto.ASPNET.MVC.CRUD_02.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\celio\\Desktop\\Impacta-DecolaTech\\4 - Asp.Net\\Projeto.ASPNET.MVC.CRUD_02\\Projeto.ASPNET.MVC.CRUD_02.csproj",
+        "projectName": "Projeto.ASPNET.MVC.CRUD_02",
+        "projectPath": "C:\\Users\\celio\\Desktop\\Impacta-DecolaTech\\4 - Asp.Net\\Projeto.ASPNET.MVC.CRUD_02\\Projeto.ASPNET.MVC.CRUD_02.csproj",
+        "packagesPath": "C:\\Users\\celio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\celio\\Desktop\\Impacta-DecolaTech\\4 - Asp.Net\\Projeto.ASPNET.MVC.CRUD_02\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\celio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
