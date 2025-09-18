@@ -44,7 +44,7 @@ Representa um departamento, incluindo informações como nome, email de contato,
 ## Instalação
 
 1. Clone o repositório:
-git clone [https://github.com/seu-usuario/MyTeProject.FrontEnd.git](https://github.com/BrunaBaria/Estudos-Asp.Net-Impacta/tree/main/Projeto-final-MyTe)
+git clone [Meu Projeto de MyTe](https://github.com/BrunaBaria/Estudos-Asp.Net-Impacta/tree/main/Projeto-final-MyTe)
 
 2. Navegue até o diretório do projeto:
 cd MyTeProject.FrontEnd
